@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-pink-theme:#F54E80
+  --color-pink-theme:#F54E80;
+  --color-hover-theme: #6A4EF5;
+  --color-click-theme: #563CD6;
 }

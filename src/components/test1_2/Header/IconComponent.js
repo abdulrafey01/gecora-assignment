@@ -2,9 +2,9 @@ import React from "react";
 
 const IconComponent = ({ icon, text }) => {
   return (
-    <div className="flex items-center gap-2 text-white text-sm font-bold">
+    <div className="flex items-center gap-2 text-white text-sm font-bold cursor-pointer group">
       {icon}
-      <p>{text}</p>
+      <p className="group-hover:text-hover-theme transition-all">{text}</p>
     </div>
   );
 };
