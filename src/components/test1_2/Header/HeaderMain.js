@@ -29,28 +29,28 @@ const HeaderMain = () => {
       <div className="flex gap-12 items-center justify-between w-full">
         {/* Links */}
         <div className="flex gap-12 items-center text-sm">
-          <div className="py-2 px-6 bg-white flex gap-2 items-center hover:bg-hover-theme group transition-all cursor-pointer">
+          <div className="py-2 px-6 bg-white flex gap-2 items-center hover:bg-hover-theme group transition-all duration-300 cursor-pointer">
             <p className="font-bold group-hover:text-white ">
               Všetky kategórie
             </p>
             <BurgerIcon />
           </div>
-          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all ">
+          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all duration-300 ">
             iPhone
           </p>
-          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all ">
+          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all duration-300 ">
             iPad
           </p>
-          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all ">
+          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all duration-300 ">
             MacBook
           </p>
-          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all ">
+          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all duration-300 ">
             Apple Airpods
           </p>
-          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all ">
+          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all duration-300 ">
             Smarthome
           </p>
-          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all ">
+          <p className="text-white font-medium hover:text-hover-theme cursor-pointer transition-all duration-300 ">
             Príslušenstvo
           </p>
         </div>
