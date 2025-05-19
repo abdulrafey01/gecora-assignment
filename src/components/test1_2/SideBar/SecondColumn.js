@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import SideBarLink from "./SideBarLink";
 import IphoneIcon from "@/assets/Pngs/IphoneIcon.png";
@@ -12,7 +12,44 @@ import Smarthome from "@/assets/Pngs/SmartHomeIcon.png";
 import PCIcon from "@/assets/Pngs/CpuIcon.png";
 import LEDIcon from "@/assets/Pngs/LEDIcon.png";
 import Image from "next/image";
+import { BurstIcon } from "@/assets/Svgs/BurstIcon";
+import AirpodImg from "@/assets/Pngs/AirPodImg.png";
+import IPhoneImg from "@/assets/Pngs/IphoneRotatedImg.png";
+import { BigHeart } from "@/assets/Svgs/BigHeart";
+
+const animatingData = [
+	{
+		img: AirpodImg,
+		subtitle: "Apple Airpods 2",
+		subtitleColor: "#FFD6E2",
+		title: {
+			main: "Airpody pre",
+			sec: "študentov!",
+		},
+		color: "#F54E80",
+		price: "188",
+	},
+	{
+		img: IPhoneImg,
+		subtitle: "iPhone 17 PRO",
+		subtitleColor: "#D5CCFF",
+		title: {
+			main: "Nový iPhone",
+			sec: "naskladnený!",
+		},
+		color: "#6A4EF5",
+		price: "899",
+	},
+];
 const SecondColumn = () => {
+	const [animating, setAnimating] = React.useState(1);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setAnimating((prev) => (prev === 1 ? 0 : 1));
+		}, 1500);
+		return () => clearInterval(interval);
+	}, []);
 	return (
 		<div className="flex-1 flex flex-col py-5 px-10">
 			<div className="flex justify-center items-center">
@@ -79,6 +116,42 @@ const SecondColumn = () => {
 					textFont={"font-semibold"}
 					blackVariant={true}
 				/>
+				{/* Animating box */}
+				<div
+					style={{ backgroundColor: animatingData[animating].color }}
+					className="flex justify-between gap-6 items-center  mt-20 p-4 relative transition-all w-[21rem]"
+				>
+					<div className="flex flex-col gap-2 items-start">
+						<p
+							style={{ color: animatingData[animating].subtitleColor }}
+							className=" font-semibold text-sm transition-all"
+						>
+							{animatingData[animating].subtitle}
+						</p>
+						<p className="text-white text-xl font-bold transition-all">
+							{animatingData[animating].title.main} <br />{" "}
+							{animatingData[animating].title.sec}
+						</p>
+						<div className="relative flex justify-center items-center mt-2">
+							<BurstIcon />
+							<p
+								className={`absolute font-bold text-3xl -rotate-12 transition-all`}
+							>
+								{animatingData[animating].price}€
+							</p>
+						</div>
+					</div>
+					<div className="flex h-full items-end relative">
+						<div className="relative w-40 h-40">
+							<Image
+								className="absolute top-4 transition-all w-full h-full"
+								src={animatingData[animating].img}
+								alt="AirPods"
+							/>
+						</div>
+						<BigHeart className="absolute right-0" />
+					</div>
+				</div>
 			</div>
 		</div>
 	);

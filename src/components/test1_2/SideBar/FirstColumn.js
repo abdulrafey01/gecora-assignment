@@ -10,6 +10,7 @@ import { InstaIcon } from "@/assets/Svgs/InstaIcon";
 import { YtIcon } from "@/assets/Svgs/YtIcon";
 import { WAIcon } from "@/assets/Svgs/WAIcon";
 import { TTIcon } from "@/assets/Svgs/TTIcon";
+import ClickLink from "./ClickLink";
 const FirstColumn = () => {
 	return (
 		<div className="flex-1 bg-hover-theme flex flex-col py-5 px-10">
@@ -45,13 +46,9 @@ const FirstColumn = () => {
 					arrow={false}
 				/>
 				<hr className="border-gray-400 opacity-50 mb-2" />
-				<SideBarLink text={"Kontakt"} textFont={"font-base"} arrow={false} />
-				<SideBarLink
-					text={"Často kladené otázky"}
-					textFont={"font-base"}
-					arrow={false}
-				/>
-				<SideBarLink text={"Blog"} textFont={"font-base"} arrow={false} />
+				<ClickLink text={"Kontakt"} />
+				<ClickLink text={"Často kladené otázky"} />
+				<ClickLink text={"Blog"} />
 				<hr className="border-gray-400 opacity-50 mb-2" />
 				<SideBarLink
 					text={"Obľúbené produkty"}
