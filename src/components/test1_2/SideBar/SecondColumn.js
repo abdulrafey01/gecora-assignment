@@ -119,7 +119,7 @@ const SecondColumn = () => {
 				{/* Animating box */}
 				<div
 					style={{ backgroundColor: animatingData[animating].color }}
-					className="flex justify-between gap-6 items-center  mt-20 p-4 relative transition-all w-[21rem]"
+					className="flex justify-between gap-6 items-center  mt-14 p-4 relative transition-all w-[21rem]"
 				>
 					<div className="flex flex-col gap-2 items-start">
 						<p

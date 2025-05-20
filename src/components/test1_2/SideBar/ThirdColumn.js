@@ -1,21 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import SideBarLink from "./SideBarLink";
-import IphoneIcon from "@/assets/Pngs/IphoneIcon.png";
-import AirPodIcon from "@/assets/Pngs/AirPodIcon.png";
-import MacbookIcon from "@/assets/Pngs/MacBookIcon.png";
-import IPadIcon from "@/assets/Pngs/IpodIcon.png";
-import WatchIcon from "@/assets/Pngs/WatchIcon.png";
-import CableIcon from "@/assets/Pngs/CableIcon.png";
-import ConsoleIcon from "@/assets/Pngs/ConsoleIcon.png";
-import Smarthome from "@/assets/Pngs/SmartHomeIcon.png";
-import PCIcon from "@/assets/Pngs/CpuIcon.png";
-import LEDIcon from "@/assets/Pngs/LEDIcon.png";
-import Image from "next/image";
-import { BurstIcon } from "@/assets/Svgs/BurstIcon";
-import AirpodImg from "@/assets/Pngs/AirPodImg.png";
-import IPhoneImg from "@/assets/Pngs/IphoneRotatedImg.png";
-import { BigHeart } from "@/assets/Svgs/BigHeart";
 import ClickLink from "./ClickLink";
 
 const ThirdColumn = () => {

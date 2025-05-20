@@ -4,15 +4,15 @@ import WhiteStripLinks from "./WhiteStripLinks";
 import PinkStripDiscount from "./PinkStripDiscount";
 import HeaderMain from "./HeaderMain";
 
-const Header = () => {
-  return (
-    <header className="flex flex-col">
-      <BlackStripAddress />
-      <WhiteStripLinks />
-      <PinkStripDiscount />
-      <HeaderMain />
-    </header>
-  );
+const Header = ({ setShowSideBar }) => {
+	return (
+		<header className="flex flex-col">
+			<BlackStripAddress />
+			<WhiteStripLinks />
+			<PinkStripDiscount />
+			<HeaderMain setShowSideBar={setShowSideBar} />
+		</header>
+	);
 };
 
 export default Header;

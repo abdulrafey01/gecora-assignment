@@ -1,7 +1,5 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/test1_2/Header";
-import SideBar from "@/components/test1_2/SideBar";
 
 export const metadata = {
 	title: "Create Next App",
@@ -16,8 +14,6 @@ export default function RootLayout({ children }) {
 				suppressHydrationWarning
 				className={`${inter.className} antialiased flex flex-col relative`}
 			>
-				<Header />
-				<SideBar />
 				{children}
 			</body>
 		</html>

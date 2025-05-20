@@ -11,12 +11,15 @@ import { YtIcon } from "@/assets/Svgs/YtIcon";
 import { WAIcon } from "@/assets/Svgs/WAIcon";
 import { TTIcon } from "@/assets/Svgs/TTIcon";
 import ClickLink from "./ClickLink";
-const FirstColumn = () => {
+const FirstColumn = ({ setShowSideBar }) => {
 	return (
 		<div className="flex-1 bg-hover-theme flex flex-col py-5 px-10">
 			<div className="flex flex-row justify-between items-center">
 				<Logo />
-				<div className="w-10 h-10 border-black border-[2.5px] flex cursor-pointer hover:bg-[#7055f4] active:bg-click-theme justify-center items-center">
+				<div
+					onClick={() => setShowSideBar(false)}
+					className="w-10 h-10 border-black border-[2.5px] flex cursor-pointer hover:bg-[#7055f4] active:bg-click-theme justify-center items-center"
+				>
 					<CrossIcon />
 				</div>
 			</div>

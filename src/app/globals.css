@@ -5,4 +5,25 @@
   --color-hover-theme: #6A4EF5;
   --color-click-theme: #563CD6;
   --color-light-purple:#D5CCFF;
+
+  --animate-moveRight: moveRight 1s ease-in-out ;
+  --animate-moveLeft:  moveLeft 1s ease-in-out;
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 }
