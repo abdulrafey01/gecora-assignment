@@ -5,6 +5,7 @@
   --color-hover-theme: #6A4EF5;
   --color-click-theme: #563CD6;
   --color-light-purple:#D5CCFF;
+  --color-light-gray:#7b7b7b;
 
   --animate-moveRight: moveRight 1s ease-in-out ;
   --animate-moveLeft:  moveLeft 1s ease-in-out;

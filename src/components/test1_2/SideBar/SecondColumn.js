@@ -149,8 +149,8 @@ const SecondColumn = () => {
 								alt="AirPods"
 							/>
 						</div>
-						<BigHeart className="absolute right-0" />
 					</div>
+					<BigHeart className="absolute  right-0" />
 				</div>
 			</div>
 		</div>

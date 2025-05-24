@@ -55,9 +55,7 @@ const FirstColumn = ({ setShowSideBar }) => {
 				<hr className="border-gray-400 opacity-50 mb-2" />
 				<SideBarLink
 					text={"Obľúbené produkty"}
-					icon={({ hovered }) => (
-						<HeartIcon fill={hovered ? "black" : "white"} />
-					)}
+					icon={({ hovered }) => <HeartIcon fill={"white"} />}
 					arrow={false}
 				/>
 				<hr className="border-gray-400 opacity-50 mb-2" />

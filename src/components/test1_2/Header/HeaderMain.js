@@ -8,7 +8,7 @@ import { HeartIcon } from "@/assets/Svgs/HeartIcon";
 import { CartIcon } from "@/assets/Svgs/CartIcon";
 import MiddleLogoContainer from "./MiddleLogoContainer";
 import { BurgerIcon } from "@/assets/Svgs/BurgerIcon";
-import HeaderInput from "./HeaderInput";
+import Input from "../Common/Input";
 
 const HeaderMain = ({ setShowSideBar }) => {
 	return (
@@ -22,7 +22,7 @@ const HeaderMain = ({ setShowSideBar }) => {
 				<MiddleLogoContainer />
 				<div className="flex flex-1 justify-end items-center gap-4 ">
 					<ProfileIcon />
-					<HeartIcon />
+					<HeartIcon fill={"white"} />
 					<CartIcon />
 				</div>
 			</div>
@@ -60,7 +60,7 @@ const HeaderMain = ({ setShowSideBar }) => {
 					</p>
 				</div>
 				{/* Input */}
-				<HeaderInput />
+				<Input placeholder={"Zadajte názov produktu"} icon />
 			</div>
 		</div>
 	);
