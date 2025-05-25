@@ -35,7 +35,7 @@ const HeaderMain = ({ setShowSideBar }) => {
 						}}
 						className="py-2 px-6 bg-white flex gap-2 items-center hover:bg-hover-theme group transition-all duration-300 cursor-pointer"
 					>
-						<p className="font-bold group-hover:text-white select-none">
+						<p className="font-bold group-hover:text-white select-none whitespace-nowrap">
 							Všetky kategórie
 						</p>
 						<BurgerIcon />

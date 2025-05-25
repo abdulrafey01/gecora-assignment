@@ -14,7 +14,7 @@ import ClickLink from "./ClickLink";
 const FirstColumn = ({ setShowSideBar }) => {
 	return (
 		<div className="flex-1 bg-hover-theme flex flex-col py-5 px-10">
-			<div className="flex flex-row justify-between items-center">
+			<div className="flex flex-row justify-between gap-4 items-center">
 				<Logo />
 				<div
 					onClick={() => setShowSideBar(false)}

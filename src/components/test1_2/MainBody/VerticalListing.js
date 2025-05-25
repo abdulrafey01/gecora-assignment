@@ -34,6 +34,7 @@ const VerticalListing = () => {
 				imgLeftMargin={25}
 				imgRightMargin={25}
 			/>
+			<hr className="w-full border-gray-300" />
 		</div>
 	);
 };

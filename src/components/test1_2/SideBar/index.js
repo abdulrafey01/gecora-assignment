@@ -23,7 +23,7 @@ const SideBar = ({ showSideBar, setShowSideBar }) => {
 		isAnimating && (
 			<BlackOverlay>
 				<div
-					className={`w-[80%] min-h-full bg-white flex ${
+					className={`w-[90%] min-h-full bg-white flex ${
 						showSideBar ? "animate-moveRight" : "animate-moveLeft"
 					}`}
 				>

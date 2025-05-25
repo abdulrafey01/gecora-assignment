@@ -35,11 +35,7 @@ const ProductHorizontal = ({
 					</div>
 				</div>
 			</div>
-			<div
-				className={`flex flex-col ${
-					discount ? "items-center" : "items-end"
-				} w-40 `}
-			>
+			<div className={`flex flex-col items-end w-40`}>
 				<div className="flex items-center gap-2">
 					<p
 						className={`${
@@ -49,7 +45,7 @@ const ProductHorizontal = ({
 						1299 €
 					</p>
 					{discount && (
-						<p className="line-through text-light-gray text-sm ">1799 €</p>
+						<p className="line-through text-light-gray text-sm my-2">1799 €</p>
 					)}
 					<DustBinIcon className="ml-2" />
 				</div>
