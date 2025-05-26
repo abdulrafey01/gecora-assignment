@@ -63,7 +63,7 @@ const Footer = () => {
 								className={"w-full"}
 								iconEnd
 							/>
-							<div className="bg-black flex text-white py-3.5  px-10 cursor-pointer select-none font-semibold ">
+							<div className="bg-black flex text-white py-3.5  px-10 cursor-pointer select-none font-semibold hover:bg-hover-theme active:bg-click-theme">
 								Odoslať
 							</div>
 						</div>

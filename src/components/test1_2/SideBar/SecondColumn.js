@@ -119,34 +119,45 @@ const SecondColumn = () => {
 				{/* Animating box */}
 				<div
 					style={{ backgroundColor: animatingData[animating].color }}
-					className="flex justify-between gap-6 items-center  mt-14 p-4 relative transition-all w-[21rem]"
+					className="flex justify-between gap-6 items-center  mt-14 p-4 relative transition-all duration-300 w-[21rem]"
 				>
 					<div className="flex flex-col gap-2 items-start">
 						<p
 							style={{ color: animatingData[animating].subtitleColor }}
-							className=" font-semibold text-sm transition-all"
+							className=" font-semibold text-sm transition-all duration-300"
 						>
 							{animatingData[animating].subtitle}
 						</p>
-						<p className="text-white text-xl font-bold transition-all">
+						<p className="text-white text-xl font-bold transition-all duration-300">
 							{animatingData[animating].title.main} <br />{" "}
 							{animatingData[animating].title.sec}
 						</p>
 						<div className="relative flex justify-center items-center mt-2">
 							<BurstIcon />
 							<p
-								className={`absolute font-bold text-3xl -rotate-12 transition-all`}
+								className={`absolute font-bold text-3xl -rotate-12 transition-all duration-300`}
 							>
 								{animatingData[animating].price}€
 							</p>
 						</div>
 					</div>
 					<div className="flex h-full items-end relative">
-						<div className="relative w-40 h-40">
+						<div className="relative w-[168px] h-[217px] ">
 							<Image
-								className="absolute top-4 transition-all w-full h-full"
-								src={animatingData[animating].img}
+								style={{ opacity: animating === 0 ? 1 : 0 }}
+								width={168}
+								height={96}
+								className="absolute top-4 transition-all duration-200 w-full h-full object-contain"
+								src={animatingData[0].img}
 								alt="AirPods"
+							/>
+							<Image
+								style={{ opacity: animating === 1 ? 1 : 0 }}
+								width={158}
+								height={217}
+								className="absolute top-10 transition-all duration-200 w-full h-full object-contain"
+								src={animatingData[1].img}
+								alt="iPhone"
 							/>
 						</div>
 					</div>
