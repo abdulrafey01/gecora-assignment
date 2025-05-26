@@ -144,18 +144,18 @@ const SecondColumn = () => {
 					<div className="flex h-full items-end relative">
 						<div className="relative w-[168px] h-[217px] ">
 							<Image
-								style={{ opacity: animating === 0 ? 1 : 0 }}
+								style={{ display: animating === 0 ? "block" : "none" }}
 								width={168}
 								height={96}
-								className="absolute top-4 transition-all duration-200 w-full h-full object-contain"
+								className="absolute top-4 transition-all duration-300 w-full h-full object-contain"
 								src={animatingData[0].img}
 								alt="AirPods"
 							/>
 							<Image
-								style={{ opacity: animating === 1 ? 1 : 0 }}
+								style={{ display: animating === 1 ? "block" : "none" }}
 								width={158}
 								height={217}
-								className="absolute top-10 transition-all duration-200 w-full h-full object-contain"
+								className="absolute top-[39px] transition-all duration-300 w-full h-full object-contain"
 								src={animatingData[1].img}
 								alt="iPhone"
 							/>
