@@ -1,16 +1,23 @@
 import { HeartIcon } from "@/assets/Svgs/HeartIcon";
 import Image from "next/image";
 import React from "react";
-import ProFullSize from "@/assets/Pngs/14ProBigSize.png";
-import ProBack from "@/assets/Pngs/17ProBack.png";
 import { PlusIcon } from "@/assets/Svgs/PlusIcon";
 import { motion } from "motion/react";
 import { TickIcon } from "@/assets/Svgs/TickIcon";
-const ProductVertical = () => {
+import { HeartIcon2 } from "@/assets/Svgs/HeartIcon2";
+const ProductVertical = ({
+	images,
+	imgWidth,
+	imgHeight,
+	hoverImgWidth,
+	hoverImgHeight,
+}) => {
 	const [color, setColor] = React.useState(0);
 	const [imgHover, setImgHover] = React.useState(false);
 	const [variantClick, setVariantClick] = React.useState(false);
-	const images = [ProFullSize, ProBack];
+
+	const [isHeartHovered, setIsHeartHovered] = React.useState(false);
+	const [isHeartClicked, setIsHeartClicked] = React.useState(false);
 	const [variantSelected, setVariantSelected] = React.useState(false);
 	return (
 		<div className="flex flex-col w-80">
@@ -20,20 +27,33 @@ const ProductVertical = () => {
 				</div>
 
 				<motion.div
+					onHoverStart={() => setIsHeartHovered(true)}
+					onAnimationComplete={() => setIsHeartHovered(false)}
 					className="z-10 cursor-pointer"
-					whileHover={{ rotate: [10, 0, 15, -15, 15, 0] }}
+					animate={{
+						rotate: isHeartHovered && [10, 0, 15, -15, 15, 0],
+					}}
+					whileTap={{ scale: 1.2 }}
 				>
-					<HeartIcon className="w-8 h-8" />
+					<HeartIcon2
+						onClick={() => setIsHeartClicked(!isHeartClicked)}
+						className={`w-6 h-6 `}
+						fill={isHeartClicked ? "#6A4EF5" : "white"}
+						stroke={isHeartClicked ? "#6A4EF5" : "black"}
+						strokeWidth={2}
+					/>
 				</motion.div>
 			</div>
 			<div
 				onMouseEnter={() => setImgHover(true)}
 				onMouseLeave={() => setImgHover(false)}
-				className="relative"
+				className="relative select-none  flex justify-center items-center"
 			>
 				<Image
-					width={336}
-					height={312}
+					// width={336}
+					// height={312}
+					width={imgWidth}
+					height={imgHeight}
 					src={images[0]}
 					alt="iphone"
 					className={`relative bottom-10 cursor-pointer transition-all duration-300 ${
@@ -41,8 +61,8 @@ const ProductVertical = () => {
 					}`}
 				/>
 				<Image
-					width={336}
-					height={312}
+					width={hoverImgWidth || imgWidth}
+					height={hoverImgHeight || imgHeight}
 					src={images[1]}
 					alt="iphone"
 					className={`absolute bottom-10 cursor-pointer transition-all duration-300 ${
