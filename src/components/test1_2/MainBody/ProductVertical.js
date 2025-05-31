@@ -7,8 +7,10 @@ import { TickIcon } from "@/assets/Svgs/TickIcon";
 import { HeartIcon2 } from "@/assets/Svgs/HeartIcon2";
 const ProductVertical = ({
 	images,
+	defaultImg,
 	imgWidth,
 	imgHeight,
+	yellowTag,
 	hoverImgWidth,
 	hoverImgHeight,
 }) => {
@@ -21,19 +23,32 @@ const ProductVertical = ({
 	const [variantSelected, setVariantSelected] = React.useState(false);
 	return (
 		<div className="flex flex-col w-80">
-			<div className="flex justify-between items-center">
-				<div className="py-1 px-1 text-xs font-semibold bg-[#D0FF16]">
-					Novinka
-				</div>
+			<div
+				className={`flex ${
+					!yellowTag ? "justify-end" : "justify-between"
+				} items-center`}
+			>
+				{yellowTag && (
+					<div className="py-1 px-1 text-xs font-semibold bg-[#D0FF16]">
+						Novinka
+					</div>
+				)}
 
 				<motion.div
-					onHoverStart={() => setIsHeartHovered(true)}
-					onAnimationComplete={() => setIsHeartHovered(false)}
+					onHoverStart={() => {
+						setIsHeartHovered(true);
+						setTimeout(() => {
+							setIsHeartHovered(false);
+						}, 800);
+					}}
 					className="z-10 cursor-pointer"
 					animate={{
-						rotate: isHeartHovered && [10, 0, 15, -15, 15, 0],
+						rotate: isHeartHovered ? [10, 0, 15, -15, 15, 0] : 0,
 					}}
-					whileTap={{ scale: 1.2 }}
+					whileTap={{
+						scale: 1.2,
+						transition: { duration: 0.2 },
+					}}
 				>
 					<HeartIcon2
 						onClick={() => setIsHeartClicked(!isHeartClicked)}
@@ -47,19 +62,30 @@ const ProductVertical = ({
 			<div
 				onMouseEnter={() => setImgHover(true)}
 				onMouseLeave={() => setImgHover(false)}
-				className="relative select-none  flex justify-center items-center"
+				className="relative select-none  flex justify-center items-center w-80 h-80"
 			>
-				<Image
-					// width={336}
-					// height={312}
-					width={imgWidth}
-					height={imgHeight}
-					src={images[0]}
-					alt="iphone"
-					className={`relative bottom-10 cursor-pointer transition-all duration-300 ${
-						imgHover && "opacity-0"
-					}`}
-				/>
+				{defaultImg ? (
+					<div
+						className={`relative bottom-10 cursor-pointer transition-all duration-300 ${
+							imgHover && "opacity-0"
+						}`}
+					>
+						{defaultImg}
+					</div>
+				) : (
+					<Image
+						// width={336}
+						// height={312}
+						width={imgWidth}
+						height={imgHeight}
+						src={images[0]}
+						alt="iphone"
+						className={`relative bottom-10 cursor-pointer transition-all duration-300 ${
+							imgHover && "opacity-0"
+						}`}
+					/>
+				)}
+
 				<Image
 					width={hoverImgWidth || imgWidth}
 					height={hoverImgHeight || imgHeight}
@@ -73,10 +99,10 @@ const ProductVertical = ({
 					onClick={() => setVariantClick(!variantClick)}
 					animate={{
 						opacity: imgHover ? 1 : 0,
-						height: variantClick ? 90 : 50,
+						height: variantClick ? 85 : 50,
 					}}
 					transition={{ type: "spring", duration: 0.5 }}
-					className={`py-3 w-[270px]  bg-black absolute top-42 left-6 cursor-pointer select-none `}
+					className={`py-3 w-[270px]  bg-black absolute top-48 left-6 cursor-pointer select-none `}
 				>
 					{variantClick ? (
 						<motion.div className="flex flex-col px-2  select-none">

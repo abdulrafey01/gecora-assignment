@@ -6,7 +6,11 @@ import ProFullSize from "@/assets/Pngs/14ProBigSize.png";
 import ProBack from "@/assets/Pngs/17ProBack.png";
 import AirPod from "@/assets/Pngs/AirPodFull3.png";
 import PodHover from "@/assets/Pngs/PodsHover.png";
+import LaptopHover from "@/assets/Pngs/Laptop-Hover.png";
+import Laptop from "@/assets/Pngs/MacBook.png";
 import { RightArrowTailed } from "@/assets/Svgs/RightArrowTailed";
+import StarAnimated from "./StarAnimated";
+import LaptopImg from "./LaptopImg";
 
 const HorizontalListing = () => {
 	const [scrollIndex, setScrollIndex] = React.useState(0);
@@ -30,9 +34,8 @@ const HorizontalListing = () => {
 	return (
 		<div className="flex flex-col gap-6 items-start w-full overflow-hidden ">
 			<div className="w-full flex justify-start items-center px-8 py-4 gap-4">
-				<div>
-					<StarIcon />
-				</div>
+				<StarAnimated />
+
 				<p className="text-4xl font-bold">Mohlo by vás zaujímať</p>
 			</div>
 			<div
@@ -44,6 +47,16 @@ const HorizontalListing = () => {
 						images={[ProFullSize, ProBack]}
 						imgWidth={336}
 						imgHeight={312}
+						yellowTag
+					/>
+				</div>
+				<div className="min-w-1/4">
+					<ProductVertical
+						images={[Laptop, LaptopHover]}
+						defaultImg={<LaptopImg />}
+						imgWidth={370}
+						imgHeight={370}
+						yellowTag
 					/>
 				</div>
 				<div className="min-w-1/4">
@@ -64,18 +77,10 @@ const HorizontalListing = () => {
 				</div>
 				<div className="min-w-1/4">
 					<ProductVertical
-						images={[AirPod, PodHover]}
-						imgWidth={132}
-						imgHeight={256}
-						hoverImgWidth={212}
-						hoverImgHeight={216}
-					/>
-				</div>
-				<div className="min-w-1/4">
-					<ProductVertical
-						images={[ProFullSize, ProBack]}
-						imgWidth={336}
-						imgHeight={312}
+						images={[Laptop, LaptopHover]}
+						defaultImg={<LaptopImg />}
+						imgWidth={370}
+						imgHeight={370}
 					/>
 				</div>
 				<div className="min-w-1/4">

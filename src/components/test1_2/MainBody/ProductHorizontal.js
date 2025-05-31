@@ -47,7 +47,7 @@ const ProductHorizontal = ({
 					{discount && (
 						<p className="line-through text-light-gray text-sm my-2">1799 €</p>
 					)}
-					<DustBinIcon className="ml-2" />
+					<DustBinIcon className="ml-2 cursor-pointer" />
 				</div>
 
 				<p

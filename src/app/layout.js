@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body
 				suppressHydrationWarning
-				className={`${inter.className} antialiased flex flex-col relative`}
+				className={`${inter.className} antialiased flex flex-col relative select-none`}
 			>
 				{children}
 			</body>
