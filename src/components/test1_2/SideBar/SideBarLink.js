@@ -48,7 +48,7 @@ const SideBarLink = ({
           <div
             className={`w-full  ${
               blackVariant ? "bg-black h-[1px]" : "bg-light-purple h-[0.3px]"
-            } relative bottom-[2px] transition-all duration-100
+            } relative bottom-[2px] transition-all duration-300
 						${hovered && !selected ? "opacity-100" : "opacity-0"}`}
           ></div>
         </div>
