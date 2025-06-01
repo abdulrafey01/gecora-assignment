@@ -20,7 +20,7 @@ const ClickLink = ({ blackVariant, text, textFont }) => {
       <div className="flex flex-col justify-center items-center">
         <p
           onMouseDown={() => setSelected(true)}
-          className={` select-none  transition-all text-lg duration-300
+          className={` select-none  transition-all text-lg duration-200
                         ${
                           hovered && !selected
                             ? blackVariant
