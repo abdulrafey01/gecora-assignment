@@ -70,7 +70,7 @@ const SideBarLink = ({
 				`}
           ></div>
           <RightArrowIcon
-            className={`w-3 h-3 transition-all duration-200
+            className={`w-3 h-3 transition-all duration-300
 					${hovered && !selected && (blackVariant ? "fill-hover-theme" : "fill-white")}
 					${
             selected
